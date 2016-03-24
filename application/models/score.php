@@ -3,7 +3,7 @@
 class Score extends CI_Model {
      function get_all_scores()
      {
-         return $this->db->query("SELECT * FROM score")->result_array();
+         return $this->db->query("SELECT * FROM scoreboard")->result_array();
      }
     //  function get_product_by_id($product_id)
     //  {

@@ -20,7 +20,7 @@ class Main extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 		$this->load->model("Score");
 	}
 
@@ -34,6 +34,11 @@ class Main extends CI_Controller {
 		// $user = $this->input->post('user');
 		// $score = $this->input->post('score');
 		$this->Score->add_score($user, $score);
+	}
+
+	public function get_all_scores(){
+		$data = $this->Score->get_all_scores();
+		print(json_encode($data));
 	}
 
 }

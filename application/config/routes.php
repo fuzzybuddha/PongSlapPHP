@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "main";
 $route['add_score/(:any)/(:any)'] = "main/add_score/$1/$2";
+$route['leaderboard_data'] = "main/get_all_scores";
 $route['404_override'] = '';
 
 
